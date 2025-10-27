@@ -93,7 +93,7 @@ if st.sidebar.button("Analysis"):
 # ---- Overview page ----
 if st.session_state.page == "Overview":
     st.title("Overview")
-    st.subheader("Welcome to the Crop Recommendation App!")
+    st.subheader("Welcome to the Crop Recommendation System!")
     show_image("image1.jpg", caption="Healthy Crops")
     st.write("""
         This application assists farmers in selecting the optimal crop to cultivate, considering soil composition

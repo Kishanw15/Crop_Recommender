@@ -6,4 +6,4 @@ sklearn
 pandas
 numpy
 matplotlib
-seaborn 
+seaborn

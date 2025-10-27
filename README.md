@@ -20,13 +20,13 @@ The **Crop Recommender** project bridges the gap between crop information and da
 
 ## 🧠 System Architecture
 
+
 ```mermaid
 flowchart LR
     A[Data Load] --> B[Data Preprocessing]
-    B --> C[Exploratory Data Analysis (EDA)]
-    C --> D[Machine Learning Model]
-    D --> E[Evaluation]
-    E --> F[Deployment]
-    F --> G[Others (Reporting, Monitoring, Future Work)]
-    E -- If results unsatisfactory --> B
-    F --> G
+    B --> C[Exploratory Data Analysis]
+    C --> D[Model Training]
+    D --> E[Model Evaluation]
+    E --> F[Model Deployment]
+    F --> G[Reporting and Monitoring]
+    E -->|Feedback Loop| B

@@ -21,11 +21,14 @@ The **Crop Recommender** project bridges the gap between crop information and da
 ## 🧠 System Architecture
 
 ```mermaid
-graph TD
-A[JXBS-3001 Sensor (NPK)] 
-C[FC-28 Moisture Sensor] --> B
-D[DHT11 Temperature & Humidity] --> B
-B -->|MQTT Protocol| E[Cloud Server / Broker]
-E --> F[ML Model (Python / Scikit-learn)]
-F --> G[Database (Firebase / SQL)]
-G --> H[Mobile App (Flutter)]
+graph LR
+  A[Data Load] --> B[Data Preprocessing]
+  B --> C[Exploratory Data Analysis (EDA)]
+  C --> D[Machine Learning Model]
+  D --> E[Evaluation]
+  E --> F[Deployment]
+  F --> G[Others (Reporting, Monitoring, Future Work)]
+  %% Iterative feedback loop
+  E -->|If results unsatisfactory| B
+  %% Optional arrow from Deployment to Monitoring/Reporting
+  F --> G
